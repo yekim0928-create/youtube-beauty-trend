@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(
       {
         error:
-          ".env.local 파일에 YOUTUBE_API_KEY가 설정되어 있지 않습니다. YouTube Data API v3 키를 발급받아 등록해주세요.",
+          "YOUTUBE_API_KEY 환경변수가 설정되어 있지 않습니다. 로컬은 .env.local, Vercel은 프로젝트 Settings > Environment Variables에 YouTube Data API v3 키를 등록해주세요.",
       },
       { status: 500 },
     );
